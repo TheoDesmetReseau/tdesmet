@@ -26,7 +26,6 @@
         }
     </script>
     <style>
-        /* Ajout de la police Inter pour un rendu plus proche des standards actuels */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         body {
@@ -34,14 +33,14 @@
             color: #333;
         }
 
-        /* Style spécifique pour le menu de navigation */
+        /* Navigation Style */
         .nav-item {
             position: relative;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #333;
+            color: #4a4a4a;
             padding-bottom: 4px;
             transition: color 0.3s;
         }
@@ -65,7 +64,7 @@
             width: 100%;
         }
 
-        /* Titres de section avec le style BDL (souvent une petite ligne rouge en dessous) */
+        /* Section Titles */
         .section-title {
             position: relative;
             display: inline-block;
@@ -79,12 +78,12 @@
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
-            width: 50px;
+            width: 60px;
             height: 3px;
             background-color: #e30613;
         }
 
-        /* Cartes */
+        /* Hover effects */
         .card-hover {
             transition: all 0.3s ease;
         }
@@ -98,51 +97,44 @@
 
     <div class="bg-bdl-dark text-white text-xs py-2 hidden md:block">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex space-x-4">
+            <div class="flex space-x-6">
                 <span><i class="fas fa-phone-alt mr-2 text-bdl-red"></i>03 27 46 16 46</span>
                 <span><i class="fas fa-envelope mr-2 text-bdl-red"></i>contact@bdl-valenciennes.fr</span>
             </div>
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-bdl-red transition">Actualités</a>
                 <a href="#" class="hover:text-bdl-red transition">Recrutement</a>
-                <a href="#" class="hover:text-bdl-red transition">English</a>
             </div>
         </div>
     </div>
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
+        <div class="container mx-auto px-4 py-5">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <img src="bdl-logo.png" alt="BDL Experts" class="h-12 w-auto"> 
-                    <div class="ml-3 hidden lg:block border-l border-gray-300 pl-3">
-                        <p class="text-xs text-gray-500 font-bold uppercase leading-tight">Expertise comptable<br>Audit & Conseil</p>
+                    <div class="border-l-4 border-bdl-red pl-3">
+                        <h1 class="text-xl font-bold text-gray-800 uppercase leading-none tracking-tight">Portfolio</h1>
+                        <p class="text-xs text-gray-500 font-bold uppercase mt-1">Alternance Réseau Informatique</p>
                     </div>
                 </div>
 
-                <nav class="hidden lg:flex space-x-8 items-center">
+                <nav class="hidden lg:flex space-x-10 items-center">
                     <a href="#presentation" class="nav-item active">Présentation</a>
-                    <a href="#reseau" class="nav-item">Réseau IT</a>
+                    <a href="#reseau" class="nav-item">Infrastructure IT</a>
                     <a href="#missions" class="nav-item">Mes Missions</a>
                     <a href="#projet" class="nav-item">Projet GLPI</a>
                 </nav>
 
-                <div class="hidden lg:block">
-                    <a href="#" class="bg-bdl-red hover:bg-red-700 text-white font-bold py-2 px-6 text-sm rounded-sm transition duration-300 shadow-md">
-                        ESPACE CLIENT <i class="fas fa-lock ml-2"></i>
-                    </a>
-                </div>
-
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 focus:outline-none">
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-800 focus:outline-none hover:text-bdl-red transition">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
             <div class="px-4 py-2 space-y-1">
                 <a href="#presentation" class="block py-3 text-gray-800 font-bold border-b border-gray-100 hover:text-bdl-red">Présentation</a>
-                <a href="#reseau" class="block py-3 text-gray-800 font-bold border-b border-gray-100 hover:text-bdl-red">Réseau IT</a>
+                <a href="#reseau" class="block py-3 text-gray-800 font-bold border-b border-gray-100 hover:text-bdl-red">Infrastructure IT</a>
                 <a href="#missions" class="block py-3 text-gray-800 font-bold border-b border-gray-100 hover:text-bdl-red">Mes Missions</a>
                 <a href="#projet" class="block py-3 text-gray-800 font-bold border-b border-gray-100 hover:text-bdl-red">Projet GLPI</a>
             </div>
@@ -151,61 +143,82 @@
 
     <main class="flex-grow">
         
-        <section id="presentation" class="page py-16">
+        <section id="presentation" class="page py-16 bg-white">
             <div class="container mx-auto px-4">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase">Qui sommes-nous ?</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-                        Découvrez BDL Experts, le cabinet qui m'accompagne dans mon parcours d'alternant. Une structure alliant expertise technique et valeurs humaines.
-                    </p>
+                
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">L'Entreprise d'Accueil</h2>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
                     <div class="space-y-6">
+                        <div class="mb-6">
+                            <img src="bdl-logo.png" alt="BDL Experts Logo" class="h-20 w-auto object-contain">
+                        </div>
+
                         <h3 class="text-2xl font-bold text-gray-800">Le conseil en <span class="text-bdl-red">+</span></h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Fondé il y a plus de 30 ans, <strong>BDL Experts</strong> est un acteur majeur de l'expertise comptable dans les Hauts-de-France. Nous accompagnons les chefs d'entreprise à chaque étape de leur développement, de la création à la transmission.
+                        <div class="w-12 h-1 bg-bdl-red mb-4"></div>
+                        
+                        <p class="text-gray-600 leading-relaxed text-lg">
+                            Fondé il y a plus de 30 ans, <strong>BDL Experts</strong> est un acteur majeur de l'expertise comptable dans les Hauts-de-France. 
                         </p>
-                        <div class="grid grid-cols-2 gap-4 mt-6">
-                            <div class="border-l-4 border-bdl-red pl-4">
-                                <span class="block text-3xl font-bold text-gray-800">8</span>
-                                <span class="text-sm text-gray-500 uppercase font-semibold">Sites de proximité</span>
+                        <p class="text-gray-600 leading-relaxed">
+                            Bien plus qu'un simple cabinet comptable, BDL se positionne comme un véritable partenaire stratégique pour les chefs d'entreprise, les accompagnant de la création à la transmission. L'entreprise allie proximité humaine et expertise technique de haut niveau.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="bg-gray-50 p-4 rounded border-l-4 border-bdl-red">
+                                <span class="block text-4xl font-bold text-gray-800">8</span>
+                                <span class="text-sm text-gray-500 uppercase font-bold tracking-wide">Sites de proximité</span>
                             </div>
-                            <div class="border-l-4 border-bdl-red pl-4">
-                                <span class="block text-3xl font-bold text-gray-800">320</span>
-                                <span class="text-sm text-gray-500 uppercase font-semibold">Collaborateurs</span>
+                            <div class="bg-gray-50 p-4 rounded border-l-4 border-bdl-red">
+                                <span class="block text-4xl font-bold text-gray-800">320</span>
+                                <span class="text-sm text-gray-500 uppercase font-bold tracking-wide">Collaborateurs</span>
                             </div>
                         </div>
-                        <div class="pt-4">
-                            <a href="https://www.bdl-experts.com/" target="_blank" class="text-bdl-red font-bold hover:underline">
-                                Visiter le site officiel <i class="fas fa-arrow-right ml-1"></i>
+                        
+                        <div class="pt-6">
+                            <a href="https://www.bdl-experts.com/" target="_blank" class="inline-flex items-center text-bdl-red font-bold hover:text-red-800 transition">
+                                <span class="border-b-2 border-bdl-red pb-1">Visiter le site officiel</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="bg-gray-200 p-2 rounded-sm shadow-lg transform rotate-2 hover:rotate-0 transition duration-500">
-                            <img src="logicielcomptable.jpg" alt="Locaux BDL" class="w-full h-auto rounded-sm">
+
+                    <div class="relative h-full flex items-center">
+                        <div class="bg-gray-100 p-2 rounded shadow-xl transform rotate-1 hover:rotate-0 transition duration-500 w-full">
+                            <img src="logicielcomptable.jpg" alt="Locaux et Logiciels BDL" class="w-full h-auto rounded shadow-inner">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-bdl-dark text-white p-4 rounded shadow-lg hidden md:block">
+                            <p class="font-bold text-center">Implantations</p>
+                            <p class="text-xs text-gray-400">Hauts-de-France</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded shadow-lg border-t-4 border-bdl-red">
-                    <h3 class="text-xl font-bold text-center mb-8 uppercase">Nos Domaines d'Intervention</h3>
+                <div class="bg-gray-50 p-10 rounded shadow-inner mt-12">
+                    <h3 class="text-lg font-bold text-center mb-8 uppercase text-gray-700 tracking-wider">Domaines d'Intervention</h3>
                     <div class="grid md:grid-cols-3 gap-8 text-center">
-                        <div class="group p-4 hover:bg-gray-50 transition rounded">
-                            <i class="fas fa-calculator text-4xl text-gray-400 group-hover:text-bdl-red mb-4 transition"></i>
+                        <div class="group p-6 bg-white rounded shadow-sm hover:shadow-md transition border-t-2 border-transparent hover:border-bdl-red">
+                            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-50 transition">
+                                <i class="fas fa-calculator text-3xl text-gray-400 group-hover:text-bdl-red transition"></i>
+                            </div>
                             <h4 class="font-bold text-gray-800 mb-2">Comptabilité</h4>
-                            <p class="text-sm text-gray-600">Pilotage financier et tenue des comptes.</p>
+                            <p class="text-sm text-gray-600">Pilotage financier & tenue des comptes.</p>
                         </div>
-                        <div class="group p-4 hover:bg-gray-50 transition rounded">
-                            <i class="fas fa-users text-4xl text-gray-400 group-hover:text-bdl-red mb-4 transition"></i>
+                        <div class="group p-6 bg-white rounded shadow-sm hover:shadow-md transition border-t-2 border-transparent hover:border-bdl-red">
+                            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-50 transition">
+                                <i class="fas fa-users text-3xl text-gray-400 group-hover:text-bdl-red transition"></i>
+                            </div>
                             <h4 class="font-bold text-gray-800 mb-2">Social & RH</h4>
-                            <p class="text-sm text-gray-600">Gestion de la paie et conseil social.</p>
+                            <p class="text-sm text-gray-600">Gestion de la paie & conseil social.</p>
                         </div>
-                        <div class="group p-4 hover:bg-gray-50 transition rounded">
-                            <i class="fas fa-gavel text-4xl text-gray-400 group-hover:text-bdl-red mb-4 transition"></i>
+                        <div class="group p-6 bg-white rounded shadow-sm hover:shadow-md transition border-t-2 border-transparent hover:border-bdl-red">
+                            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-50 transition">
+                                <i class="fas fa-gavel text-3xl text-gray-400 group-hover:text-bdl-red transition"></i>
+                            </div>
                             <h4 class="font-bold text-gray-800 mb-2">Juridique</h4>
-                            <p class="text-sm text-gray-600">Droit des sociétés et fiscalité.</p>
+                            <p class="text-sm text-gray-600">Droit des sociétés & fiscalité.</p>
                         </div>
                     </div>
                 </div>
@@ -214,130 +227,166 @@
 
         <section id="reseau" class="page py-16 bg-bdl-gray hidden">
             <div class="container mx-auto px-4">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase">Infrastructure IT</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-                        Analyse technique du système d'information supportant les 8 sites du groupe.
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">Infrastructure IT</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Architecture technique supportant l'activité des 8 sites connectés.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <div class="bg-white p-6 rounded-sm shadow-md card-hover border-b-2 border-transparent hover:border-bdl-red">
-                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-bdl-red">
-                            <i class="fas fa-server text-xl"></i>
+                    <div class="bg-white p-8 rounded shadow-md card-hover border-b-4 border-transparent hover:border-bdl-red group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center text-bdl-red group-hover:bg-bdl-red group-hover:text-white transition duration-300">
+                                <i class="fas fa-server text-2xl"></i>
+                            </div>
+                            <span class="text-gray-300 font-bold text-4xl">01</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Systèmes</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Virtualisation VMware</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Windows Server 2019/2022</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Active Directory Multi-sites</li>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Systèmes</h3>
+                        <ul class="text-sm text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Virtualisation VMware</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Windows Server 2019/2022</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Active Directory Multi-sites</li>
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-sm shadow-md card-hover border-b-2 border-transparent hover:border-bdl-red">
-                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-bdl-red">
-                            <i class="fas fa-network-wired text-xl"></i>
+                    <div class="bg-white p-8 rounded shadow-md card-hover border-b-4 border-transparent hover:border-bdl-red group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center text-bdl-red group-hover:bg-bdl-red group-hover:text-white transition duration-300">
+                                <i class="fas fa-network-wired text-2xl"></i>
+                            </div>
+                            <span class="text-gray-300 font-bold text-4xl">02</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Réseau & Sécurité</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Firewall Fortinet</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>VPN SSL / IPsec</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Segmentation VLAN</li>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Réseau & Sécurité</h3>
+                        <ul class="text-sm text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Firewall Fortinet</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>VPN SSL / IPsec</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Segmentation VLAN</li>
                         </ul>
                     </div>
 
-                    <div class="bg-white p-6 rounded-sm shadow-md card-hover border-b-2 border-transparent hover:border-bdl-red">
-                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-bdl-red">
-                            <i class="fas fa-cloud text-xl"></i>
+                    <div class="bg-white p-8 rounded shadow-md card-hover border-b-4 border-transparent hover:border-bdl-red group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center text-bdl-red group-hover:bg-bdl-red group-hover:text-white transition duration-300">
+                                <i class="fas fa-cloud text-2xl"></i>
+                            </div>
+                            <span class="text-gray-300 font-bold text-4xl">03</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cloud & SaaS</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Microsoft 365 Business</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>SharePoint / OneDrive</li>
-                            <li><i class="fas fa-check text-bdl-red mr-2"></i>Sauvegardes Externalisées</li>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Cloud & SaaS</h3>
+                        <ul class="text-sm text-gray-600 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Microsoft 365 Business</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>SharePoint / OneDrive</li>
+                            <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-3"></i>Sauvegardes Externalisées</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="bg-bdl-dark text-white rounded-sm p-8 shadow-lg">
-                    <h3 class="text-xl font-bold mb-6 text-center">Environnement Technique</h3>
-                    <div class="flex flex-wrap justify-center gap-8 opacity-80">
-                        <div class="text-center"><i class="fab fa-windows text-3xl mb-2"></i><p class="text-xs">Windows</p></div>
-                        <div class="text-center"><i class="fab fa-linux text-3xl mb-2"></i><p class="text-xs">Linux</p></div>
-                        <div class="text-center"><i class="fas fa-shield-alt text-3xl mb-2"></i><p class="text-xs">Fortinet</p></div>
-                        <div class="text-center"><i class="fas fa-ticket-alt text-3xl mb-2"></i><p class="text-xs">GLPI</p></div>
+                <div class="bg-bdl-dark text-white rounded p-8 shadow-lg max-w-4xl mx-auto">
+                    <h3 class="text-lg font-bold mb-6 text-center uppercase tracking-widest text-gray-400">Environnement Technique</h3>
+                    <div class="flex flex-wrap justify-center gap-12">
+                        <div class="text-center group"><i class="fab fa-windows text-4xl mb-2 group-hover:text-blue-400 transition"></i><p class="text-xs text-gray-400">Windows</p></div>
+                        <div class="text-center group"><i class="fab fa-linux text-4xl mb-2 group-hover:text-yellow-400 transition"></i><p class="text-xs text-gray-400">Ubuntu</p></div>
+                        <div class="text-center group"><i class="fas fa-shield-alt text-4xl mb-2 group-hover:text-red-500 transition"></i><p class="text-xs text-gray-400">Fortinet</p></div>
+                        <div class="text-center group"><i class="fas fa-ticket-alt text-4xl mb-2 group-hover:text-green-400 transition"></i><p class="text-xs text-gray-400">GLPI</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="missions" class="page py-16 hidden">
+        <section id="missions" class="page py-16 bg-white hidden">
             <div class="container mx-auto px-4">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase">Mes Missions</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-                        Intégré au service informatique, j'interviens sur le maintien en condition opérationnelle et le support utilisateur.
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">Missions & Activités</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Intégré au service informatique, j'interviens quotidiennement sur le maintien en condition opérationnelle (MCO) et le support utilisateur.
                     </p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="lg:w-1/3 space-y-6">
-                        <div class="bg-white p-6 rounded-sm shadow-md border-t-4 border-bdl-red">
-                            <h3 class="text-lg font-bold text-gray-800 mb-4">Répartition du temps</h3>
-                            <div class="space-y-4">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/3 space-y-8">
+                        <div class="bg-white p-8 rounded shadow-lg border-t-4 border-bdl-red">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Répartition du temps</h3>
+                            <div class="space-y-6">
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="font-semibold text-gray-700">Support Utilisateur</span>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="font-bold text-gray-700">Support Utilisateur</span>
                                         <span class="text-bdl-red font-bold">65%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full">
-                                        <div class="bg-bdl-red h-2 rounded-full" style="width: 65%"></div>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 65%"></div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="font-semibold text-gray-700">Projets Infrastructure</span>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="font-bold text-gray-700">Projets Infrastructure</span>
                                         <span class="text-bdl-red font-bold">25%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full">
-                                        <div class="bg-bdl-red h-2 rounded-full" style="width: 25%"></div>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 25%"></div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="font-semibold text-gray-700">Documentation</span>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="font-bold text-gray-700">Documentation</span>
                                         <span class="text-bdl-red font-bold">10%</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full">
-                                        <div class="bg-bdl-red h-2 rounded-full" style="width: 10%"></div>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 10%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-bdl-red text-white p-6 rounded-sm shadow-md text-center">
-                            <i class="fas fa-graduation-cap text-4xl mb-3"></i>
-                            <h3 class="text-xl font-bold">BTS SIO</h3>
-                            <p class="text-sm opacity-90">Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+                        <div class="bg-bdl-red text-white p-8 rounded shadow-lg text-center relative overflow-hidden">
+                            <div class="relative z-10">
+                                <i class="fas fa-graduation-cap text-5xl mb-4 text-white/90"></i>
+                                <h3 class="text-2xl font-bold mb-2">BTS SIO</h3>
+                                <p class="text-sm font-light text-white/90 uppercase tracking-wider mb-4">Option SISR</p>
+                                <p class="text-xs text-white/70 italic">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                            </div>
+                            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
                         </div>
                     </div>
 
                     <div class="lg:w-2/3 grid md:grid-cols-2 gap-6">
-                        <div class="bg-white p-6 rounded-sm shadow border-l-4 border-gray-200 hover:border-bdl-red transition duration-300">
-                            <h4 class="font-bold text-lg text-gray-800 mb-2">Helpdesk & Support</h4>
-                            <p class="text-gray-600 text-sm">Prise en charge des tickets incidents (Niveau 1 & 2). Assistance sur la suite Office, problèmes d'impression, et connectivité réseau.</p>
+                        <div class="bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
+                                    <i class="fas fa-headset text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-800">Helpdesk & Support</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">Prise en charge des tickets incidents (Niveau 1 & 2). Assistance sur la suite Office, problèmes d'impression, et connectivité réseau.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-sm shadow border-l-4 border-gray-200 hover:border-bdl-red transition duration-300">
-                            <h4 class="font-bold text-lg text-gray-800 mb-2">Gestion de Parc</h4>
-                            <p class="text-gray-600 text-sm">Préparation des postes de travail (Mastering), gestion des inventaires via GLPI, suivi des garanties matériel.</p>
+                        
+                        <div class="bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
+                                    <i class="fas fa-laptop-medical text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-800">Gestion de Parc</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">Préparation des postes de travail (Mastering), gestion des inventaires via GLPI, suivi des garanties matériel.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-sm shadow border-l-4 border-gray-200 hover:border-bdl-red transition duration-300">
-                            <h4 class="font-bold text-lg text-gray-800 mb-2">Administration Système</h4>
-                            <p class="text-gray-600 text-sm">Gestion des comptes Active Directory (Création/Départ), gestion des droits d'accès aux serveurs de fichiers, GPO.</p>
+
+                        <div class="bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
+                                    <i class="fas fa-users-cog text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-800">Admin Système</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">Gestion des comptes Active Directory (Création/Départ), gestion des droits d'accès aux serveurs de fichiers, GPO.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-sm shadow border-l-4 border-gray-200 hover:border-bdl-red transition duration-300">
-                            <h4 class="font-bold text-lg text-gray-800 mb-2">Sécurité</h4>
-                            <p class="text-gray-600 text-sm">Sensibilisation des utilisateurs (Phishing), vérification des sauvegardes quotidiennes, déploiement des mises à jour critiques.</p>
+
+                        <div class="bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
+                                    <i class="fas fa-user-shield text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-800">Sécurité</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">Sensibilisation des utilisateurs (Phishing), vérification des sauvegardes quotidiennes, déploiement des mises à jour critiques.</p>
                         </div>
                     </div>
                 </div>
@@ -346,56 +395,69 @@
 
         <section id="projet" class="page py-16 bg-gray-50 hidden">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <span class="bg-bdl-red text-white text-xs font-bold px-3 py-1 rounded uppercase mb-3 inline-block">Projet E6</span>
-                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase">Migration GLPI</h2>
+                <div class="text-center mb-16">
+                    <span class="bg-bdl-red text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase mb-4 inline-block shadow-sm">Projet E6</span>
+                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">Migration & Mise à jour GLPI</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">
                         Refonte complète de l'outil de gestion de parc et de ticketing : Installation, Migration de données et Optimisation.
                     </p>
                 </div>
 
-                <div class="relative max-w-4xl mx-auto">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300"></div>
+                <div class="relative max-w-5xl mx-auto">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300 hidden md:block"></div>
 
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-12 relative z-10">
-                        <div class="md:w-5/12 text-right pr-8">
-                            <h3 class="text-xl font-bold text-gray-800">Installation Serveur</h3>
-                            <span class="text-sm text-gray-500 font-semibold">Phase 1</span>
-                            <p class="text-gray-600 mt-2 text-sm">Déploiement d'une VM Ubuntu Server. Installation de la stack LAMP (Linux Apache MySQL PHP) sécurisée.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative z-10">
+                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-10 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-800">1. Installation Serveur</h3>
+                            <span class="text-xs text-bdl-red font-bold uppercase tracking-wider">Infrastructure</span>
+                            <p class="text-gray-600 mt-3 text-sm leading-relaxed bg-white p-4 rounded shadow-sm border-l-4 border-bdl-red md:border-l-0 md:border-r-4">
+                                Déploiement d'une VM Ubuntu Server. Installation et sécurisation de la stack <strong>LAMP</strong> (Linux Apache MySQL PHP). Configuration des vhosts Apache.
+                            </p>
                         </div>
-                        <div class="w-10 h-10 bg-bdl-red rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow">1</div>
-                        <div class="md:w-5/12 pl-8"></div>
+                        <div class="w-12 h-12 bg-bdl-red rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg text-lg">1</div>
+                        <div class="md:w-5/12 pl-0 md:pl-10 hidden md:block"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative z-10">
+                        <div class="md:w-5/12 pr-10 hidden md:block"></div>
+                        <div class="w-12 h-12 bg-bdl-red rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg text-lg">2</div>
+                        <div class="md:w-5/12 text-center md:text-left pl-0 md:pl-10 mb-6 md:mb-0 order-first md:order-last">
+                            <h3 class="text-xl font-bold text-gray-800">2. Migration Données</h3>
+                            <span class="text-xs text-bdl-red font-bold uppercase tracking-wider">Base de données</span>
+                            <p class="text-gray-600 mt-3 text-sm leading-relaxed bg-white p-4 rounded shadow-sm border-l-4 border-bdl-red">
+                                Export de la BDD de l'ancien serveur (<code>mysqldump</code>) et import sur la nouvelle instance. Mise à niveau du schéma via la console GLPI pour compatibilité v10.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="flex flex-col md:flex-row items-center justify-between mb-12 relative z-10">
-                        <div class="md:w-5/12 pr-8"></div>
-                        <div class="w-10 h-10 bg-bdl-red rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow">2</div>
-                        <div class="md:w-5/12 pl-8 text-left">
-                            <h3 class="text-xl font-bold text-gray-800">Migration Base de Données</h3>
-                            <span class="text-sm text-gray-500 font-semibold">Phase 2</span>
-                            <p class="text-gray-600 mt-2 text-sm">Export de la BDD de l'ancien serveur (MySQLDump) et import sur la nouvelle instance. Mise à niveau du schéma via la console GLPI.</p>
+                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-10 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-800">3. Résolution d'incidents</h3>
+                            <span class="text-xs text-bdl-red font-bold uppercase tracking-wider">Debugging</span>
+                            <p class="text-gray-600 mt-3 text-sm leading-relaxed bg-white p-4 rounded shadow-sm border-l-4 border-bdl-red md:border-l-0 md:border-r-4">
+                                Correction des erreurs de droits (chmod/chown) sur les dossiers de logs. Installation des extensions PHP manquantes (intl, gd, curl) détectées lors du pré-check.
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-12 relative z-10">
-                        <div class="md:w-5/12 text-right pr-8">
-                            <h3 class="text-xl font-bold text-gray-800">Résolution d'incidents</h3>
-                            <span class="text-sm text-gray-500 font-semibold">Phase 3</span>
-                            <p class="text-gray-600 mt-2 text-sm">Correction des erreurs de droits (chmod/chown) sur les dossiers de logs. Installation des extensions PHP manquantes (intl, gd, curl).</p>
-                        </div>
-                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow">3</div>
-                        <div class="md:w-5/12 pl-8"></div>
+                        <div class="w-12 h-12 bg-bdl-dark rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg text-lg">3</div>
+                        <div class="md:w-5/12 pl-0 md:pl-10 hidden md:block"></div>
                     </div>
                 </div>
 
-                <div class="max-w-4xl mx-auto bg-white p-8 rounded shadow-lg border-t-4 border-green-500 mt-8">
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 text-3xl mr-4"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Bilan du projet</h3>
-                            <p class="text-gray-600">
-                                Le nouveau serveur GLPI est opérationnel et performant. L'intégralité de l'historique (tickets + inventaire) a été conservée. La nouvelle interface responsive améliore l'expérience des techniciens et des utilisateurs finaux.
-                            </p>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded shadow-lg border-t-4 border-green-500 mt-8 flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+                    <div class="mb-4 md:mb-0 md:mr-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-500 mx-auto">
+                            <i class="fas fa-check text-3xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bilan du projet</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Le nouveau serveur GLPI est opérationnel. L'intégralité de l'historique (tickets + inventaire) a été conservée. La nouvelle interface responsive améliore l'expérience des techniciens et des utilisateurs finaux, et la sécurité est renforcée par l'OS à jour.
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">GLPI 10.x</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">Ubuntu 22.04 LTS</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded">MariaDB</span>
                         </div>
                     </div>
                 </div>
@@ -404,74 +466,91 @@
 
     </main>
 
-    <footer class="bg-bdl-dark text-white pt-16 pb-8">
+    <footer class="bg-bdl-dark text-white pt-16 pb-8 border-t-4 border-bdl-red">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-12 border-b border-gray-800 pb-12">
+            <div class="grid md:grid-cols-4 gap-10 mb-12 border-b border-gray-800 pb-12">
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">BDL Experts</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Expertise comptable, Audit & Conseil. <br>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Cabinet d'expertise comptable, d'audit et de conseil. <br>
                         Le partenaire de votre réussite dans les Hauts-de-France.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-linkedin-in text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-twitter text-xs"></i></a>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Liens Rapides</h4>
+                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Plan du Portfolio</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="#presentation" class="hover:text-bdl-red transition">Présentation</a></li>
-                        <li><a href="#reseau" class="hover:text-bdl-red transition">Réseau Informatique</a></li>
-                        <li><a href="#missions" class="hover:text-bdl-red transition">Mes Missions</a></li>
-                        <li><a href="#projet" class="hover:text-bdl-red transition">Projet</a></li>
+                        <li><a href="#presentation" class="hover:text-bdl-red transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i>Présentation</a></li>
+                        <li><a href="#reseau" class="hover:text-bdl-red transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i>Infrastructure IT</a></li>
+                        <li><a href="#missions" class="hover:text-bdl-red transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i>Mes Missions</a></li>
+                        <li><a href="#projet" class="hover:text-bdl-red transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i>Projet GLPI</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Contact</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><i class="fas fa-map-marker-alt mr-2 text-bdl-red"></i> 31 Av. Georges Clemenceau, Valenciennes</li>
-                        <li><i class="fas fa-phone mr-2 text-bdl-red"></i> 03 27 46 16 46</li>
-                        <li><i class="fas fa-envelope mr-2 text-bdl-red"></i> contact@bdl-valenciennes.fr</li>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-bdl-red"></i> 
+                            <span>31 Av. Georges Clemenceau,<br>59300 Valenciennes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-bdl-red"></i> 
+                            <span>03 27 46 16 46</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-bdl-red"></i> 
+                            <span>contact@bdl-valenciennes.fr</span>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Nos Implantations</h4>
                     <div class="flex flex-wrap gap-2 text-xs text-gray-500">
-                        <span class="border border-gray-700 px-2 py-1 rounded">Cambrai</span>
-                        <span class="border border-gray-700 px-2 py-1 rounded">Valenciennes</span>
-                        <span class="border border-gray-700 px-2 py-1 rounded">Arras</span>
-                        <span class="border border-gray-700 px-2 py-1 rounded">Lille</span>
-                        <span class="border border-gray-700 px-2 py-1 rounded">Saint-Amand</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Cambrai</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Valenciennes</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Arras</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Lille</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Saint-Amand</span>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                 <p>&copy; 2025 BDL Experts - Portfolio Alternance.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Mentions Légales</a>
-                    <a href="#" class="hover:text-white">Politique de confidentialité</a>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition">Politique de confidentialité</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Gestion de la navigation
+        // Gestion de la navigation SPA (Single Page Application)
         document.addEventListener('DOMContentLoaded', function () {
-            const navItems = document.querySelectorAll('.nav-item, #mobile-menu a');
+            const navItems = document.querySelectorAll('.nav-item, #mobile-menu a, footer ul a');
             const pages = document.querySelectorAll('.page');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileBtn = document.getElementById('mobile-menu-btn');
 
             function switchPage(targetId) {
+                // Vérifier si la section cible existe
+                const targetPage = document.getElementById(targetId);
+                if(!targetPage) return;
+
                 // Masquer toutes les pages
                 pages.forEach(p => p.classList.add('hidden'));
                 
                 // Afficher la cible
-                const targetPage = document.getElementById(targetId);
-                if(targetPage) {
-                    targetPage.classList.remove('hidden');
-                    window.scrollTo(0, 0);
-                }
+                targetPage.classList.remove('hidden');
+                
+                // Scroll en haut
+                window.scrollTo(0, 0);
 
-                // Mettre à jour le menu actif
+                // Mettre à jour le menu actif (Desktop)
                 document.querySelectorAll('.nav-item').forEach(item => {
                     item.classList.remove('active');
                     if(item.getAttribute('href') === '#' + targetId) {
@@ -482,10 +561,13 @@
 
             navItems.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    switchPage(targetId);
-                    mobileMenu.classList.add('hidden'); // Fermer menu mobile
+                    const href = link.getAttribute('href');
+                    if(href && href.startsWith('#') && href.length > 1) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        switchPage(targetId);
+                        mobileMenu.classList.add('hidden'); // Fermer menu mobile
+                    }
                 });
             });
 
@@ -493,7 +575,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Afficher Presentation par défaut
+            // Initialisation : Afficher Presentation par défaut
             switchPage('presentation');
         });
     </script>
