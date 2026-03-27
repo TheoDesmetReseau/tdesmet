@@ -278,9 +278,9 @@
                 </div>
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Systèmes</h3>
                 <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Virtualisation VMware</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Windows Server 2019/22</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Active Directory</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Virtualisation VMware/Hyper-V</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>COAXIS</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Manage Engine</li>
                 </ul>
             </div>
             
@@ -293,9 +293,9 @@
                 </div>
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Réseau & Sécurité</h3>
                 <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Firewall Fortinet</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>VPN SSL / IPsec</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>VLANs & Segmentation</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Ubiquiti</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>VPN Fortinet</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>MailInBlack</li>
                 </ul>
             </div>
 
@@ -308,13 +308,17 @@
                 </div>
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Cloud & SaaS</h3>
                 <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>M365 Business</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>SharePoint / OneDrive</li>
-                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Sauvegardes 3-2-1</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Cloud Azure</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>Office 365 / OneDrive</li>
+                    <li class="flex items-center"><i class="fas fa-check text-bdl-red mr-2"></i>SharePoint</li>
                 </ul>
             </div>
 
-            <div class="bg-white p-6 rounded shadow-md card-hover border-b-4 border-transparent hover:border-bdl-red group">
+            <div class="modal-trigger cursor-pointer bg-white p-6 rounded shadow-md card-hover border-b-4 border-transparent hover:border-bdl-red group"
+                 data-proof-title="Présence en ligne — Analyse d'audience"
+                 data-proof-desc=""
+                 data-proof-html="<div class='space-y-5'><p><strong>Données observées :</strong> novembre 2025 à février 2026.</p><div><p class='font-bold text-gray-800 mb-2'>1) Répartition des appareils</p><img src='PourcentageAppareils.png' alt='Répartition des appareils par catégorie' class='w-full rounded border border-gray-200 mb-2'><p>La majorité du trafic provient des <strong>desktop (80,6 %)</strong>, puis mobile (19,1 %) et tablette (0,4 %). Cela oriente les priorités UX vers l'affichage bureau.</p></div><div><p class='font-bold text-gray-800 mb-2'>2) Acquisition du trafic</p><img src='TypeDeRecherche.png' alt='Sessions par canal d acquisition' class='w-full rounded border border-gray-200 mb-2'><p>Le trafic est principalement alimenté par l'<strong>accès direct</strong> et l'<strong>organic search</strong>. Cette répartition valide la visibilité SEO et les accès récurrents des utilisateurs.</p></div><div><p class='font-bold text-gray-800 mb-2'>3) Engagement moyen</p><img src='VisionageMoyen.png' alt='Durée d engagement moyenne' class='w-full rounded border border-gray-200 mb-2'><p>La durée d'engagement moyenne est d'environ <strong>35 secondes</strong>, avec une variation normale sur la période. Cet indicateur sert de base pour améliorer les contenus clés.</p></div></div>"
+                 data-proof-img="">
                 <div class="flex justify-between items-start mb-6">
                     <div class="w-12 h-12 bg-gray-100 rounded flex items-center justify-center text-bdl-red group-hover:bg-bdl-red group-hover:text-white transition duration-300">
                         <i class="fas fa-globe text-xl"></i>
@@ -335,10 +339,8 @@
                         <i class="fas fa-history text-bdl-red mr-2"></i>
                         En ligne depuis 2009
                     </li>
-                    <li class="pt-2 mt-1 border-t border-gray-100">
-                        <a href="https://who.is/whois/bdl-experts.com" target="_blank" class="text-xs text-gray-400 hover:text-bdl-red transition flex items-center">
-                            <i class="fas fa-external-link-alt mr-1"></i> Source Whois
-                        </a>
+                    <li class="pt-2 mt-1 border-t border-gray-100 text-xs text-bdl-red font-bold flex items-center">
+                        <i class="fas fa-chart-line mr-1"></i> Cliquez pour voir les preuves analytics
                     </li>
                 </ul>
             </div>
@@ -418,7 +420,7 @@
                         <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
      data-proof-title="Support Informatique & Ticketing"
      data-proof-desc="Capture d'écran de l'interface de support montrant la gestion de 12 tickets actifs. Résolution d'incidents variés : synchronisation Excel/OneDrive, configuration de scanner Canon DR-M140 et dépannage sur les logiciels métiers COAXIS et DIA."
-     data-proof-img="TICKET.jpg">
+     data-proof-img="image.jpg">
      
     <div class="flex items-center mb-4">
         <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
@@ -685,11 +687,6 @@
                         Cabinet d'expertise comptable, d'audit et de conseil. <br>
                         Le partenaire de votre réussite dans les Hauts-de-France.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-linkedin-in text-xs"></i></a>
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-facebook-f text-xs"></i></a>
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-bdl-red transition"><i class="fab fa-twitter text-xs"></i></a>
-                    </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Plan du Portfolio</h4>
@@ -723,17 +720,16 @@
                         <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Cambrai</span>
                         <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Valenciennes</span>
                         <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Arras</span>
-                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Lille</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">La Bassée</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Marcq-en-Baroeul</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Armentières</span>
+                        <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Lambersart</span>
                         <span class="border border-gray-700 px-3 py-1 rounded hover:border-bdl-red hover:text-white transition cursor-default">Saint-Amand</span>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2025 BDL Experts - Portfolio Alternance.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Mentions Légales</a>
-                    <a href="#" class="hover:text-white transition">Politique de confidentialité</a>
-                </div>
+                <p>&copy; DESMET Théo - Portfolio Alternance.</p>
             </div>
         </div>
     </footer>
