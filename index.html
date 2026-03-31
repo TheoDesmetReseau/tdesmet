@@ -179,10 +179,18 @@
         <section id="presentation" class="page py-16 bg-white">
             <div class="container mx-auto px-4">
                 
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">L'Entreprise d'Accueil</h2>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 section-title uppercase tracking-wide">Présentation</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                        Choisissez le mode de présentation : entreprise d'accueil ou profil personnel.
+                    </p>
+                    <div class="inline-flex bg-gray-100 p-1 rounded-full shadow-sm">
+                        <button type="button" class="presentation-tab px-5 py-2 text-sm font-bold rounded-full bg-bdl-red text-white transition" data-target="entreprise">Entreprise</button>
+                        <button type="button" class="presentation-tab px-5 py-2 text-sm font-bold rounded-full text-gray-700 hover:text-bdl-red transition" data-target="personnelle">Personnelle</button>
+                    </div>
                 </div>
 
+                <div id="presentation-entreprise" class="presentation-panel">
                 <div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
                     <div class="space-y-6">
                         <div class="mb-6">
@@ -254,6 +262,49 @@
                             <p class="text-sm text-gray-600">Droit des sociétés & fiscalité.</p>
                         </div>
                     </div>
+                </div>
+                </div>
+
+                <div id="presentation-personnelle" class="presentation-panel hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
+                        <div class="space-y-6">
+                            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center text-bdl-red text-2xl shadow-sm">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Desmet Théo</h3>
+                            <div class="w-12 h-1 bg-bdl-red mb-4"></div>
+
+                            <p class="text-gray-600 leading-relaxed text-lg">
+                                21 ans. En BTS SIO (alternance) chez BDL, option SISR. Je travaille sur le support, l'infrastructure et la sécurisation des systèmes.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Mon parcours a été compliqué au collège à cause de difficultés familiales : je n’étais pas assidu, je n’ai pas obtenu le Brevet. J’ai continué grâce à un ami qui partait vers un Bac Pro SN, et j’ai découvert le plaisir de démonter et remonter des PC. Ensuite, j’ai naturellement accroché à la partie logiciel.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-6 mt-8">
+                                <div class="bg-gray-50 p-4 rounded border-l-4 border-bdl-red">
+                                    <span class="block text-sm text-gray-500 uppercase font-bold tracking-wide">Formation</span>
+                                    <span class="text-lg font-bold text-gray-800">Bac Pro -> BTS</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded border-l-4 border-bdl-red">
+                                    <span class="block text-sm text-gray-500 uppercase font-bold tracking-wide">Ville</span>
+                                    <span class="text-lg font-bold text-gray-800">Valenciennes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-8 rounded shadow-inner border border-gray-100">
+                            <h3 class="text-lg font-bold text-gray-800 mb-6 uppercase tracking-wider">Informations personnelles</h3>
+                            <ul class="space-y-4 text-sm text-gray-600">
+                                <li class="flex items-center"><i class="fas fa-birthday-cake text-bdl-red mr-3"></i>Âge : 21 ans</li>
+                                <li class="flex items-center"><i class="fas fa-user-graduate text-bdl-red mr-3"></i>Parcours : Bac Pro SN ARED (2022), BTS FED (1ère année, arrêt), BTS CIEL (1ère année, arrêt), actuellement BTS SIO en alternance chez BDL.</li>
+                                <li class="flex items-center"><i class="fas fa-laptop-code text-bdl-red mr-3"></i>Ce qui me motive : comprendre le fonctionnement, du matériel au logiciel (démonter/remonter les PC, puis travailler la partie logiciel).</li>
+                                <li class="flex items-center"><i class="fas fa-question-circle text-bdl-red mr-3"></i>Pourquoi l’informatique : j’aime résoudre des problèmes et faire en sorte que les systèmes tournent correctement et efficacement.</li>
+                                <li class="flex items-center"><i class="fas fa-map-marker-alt text-bdl-red mr-3"></i>Objectif : alternance en administration système ou réseau (ESN ou hôpitaux), puis licence informatique au CNAM de Valenciennes après le BTS.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -368,54 +419,11 @@
                     </p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row gap-12">
-                    <div class="lg:w-1/3 space-y-8">
-                        <div class="bg-white p-8 rounded shadow-lg border-t-4 border-bdl-red">
-                            <h3 class="text-xl font-bold text-gray-800 mb-6">Répartition du temps</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span class="font-bold text-gray-700">Support Utilisateur</span>
-                                        <span class="text-bdl-red font-bold">50%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 50%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span class="font-bold text-gray-700">Déploiement & Configuration</span>
-                                        <span class="text-bdl-red font-bold">35%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 35%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span class="font-bold text-gray-700">Parc & Procédures</span>
-                                        <span class="text-bdl-red font-bold">15%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                                        <div class="bg-bdl-red h-2 rounded-full shadow" style="width: 15%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-bdl-red text-white p-8 rounded shadow-lg text-center relative overflow-hidden">
-                            <div class="relative z-10">
-                                <i class="fas fa-graduation-cap text-5xl mb-4 text-white/90"></i>
-                                <h3 class="text-2xl font-bold mb-2">BTS SIO</h3>
-                                <p class="text-sm font-light text-white/90 uppercase tracking-wider mb-4">Option SISR</p>
-                                <p class="text-xs text-white/70 italic">Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                            </div>
-                            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-2/3 grid md:grid-cols-2 gap-6">
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 text-center md:text-left">Missions principales</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Mastering & Déploiement de postes"
                              data-proof-desc="Préparation de PC en mode manuel ou via PXE, avec standardisation des installations et gain de temps sur les déploiements en volume."
                              data-proof-img="MasteringPXE.png">
@@ -429,9 +437,9 @@
                             <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
                                 <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
                             </div>
-                        </div>
+                            </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Support applicatif & Office 365"
                              data-proof-desc="Résolution des incidents applicatifs (dont Office 365) et accompagnement utilisateur jusqu'au rétablissement complet du service."
                              data-proof-img="TicketMFA.png">
@@ -445,9 +453,9 @@
                             <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
                                 <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
                             </div>
-                        </div>
+                            </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Gestion de parc (GLPI & ManageEngine)"
                              data-proof-desc=""
                              data-proof-html="<div class='space-y-4'><figure><img src='GestionParcME.png' alt='Gestion de Parc ManageEngine - Vue 1' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Gestion de Parc — inventaire et état des actifs.</figcaption></figure><figure><img src='GestionParcME2.png' alt='Gestion de Parc ManageEngine - Vue 2' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Détails et mises à jour des équipements.</figcaption></figure></div>"
@@ -462,9 +470,9 @@
                             <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
                                 <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
                             </div>
-                        </div>
+                            </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Réseau & accès distants"
                              data-proof-desc="Installation et configuration du VPN FortiClient pour les utilisateurs, avec validation de la connectivité et des droits d'accès."
                              data-proof-img="ConfigurationVPN.png">
@@ -478,9 +486,9 @@
                             <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
                                 <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
                             </div>
-                        </div>
+                            </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Installation de solutions utilisateurs"
                              data-proof-desc="Installation et paramétrage de scanners et téléphones VoIP, avec tests de fonctionnement et accompagnement utilisateur."
                              data-proof-img="3cxInterface.png">
@@ -494,9 +502,9 @@
                             <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
                                 <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
                             </div>
-                        </div>
+                            </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
                              data-proof-title="Sécurisation & documentation"
                              data-proof-desc=""
                              data-proof-html="<div class='space-y-4'><figure><img src='ListeProcedure.png' alt='Liste de procédures' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Rédaction et structuration des procédures internes.</figcaption></figure><figure><img src='MFAUser.png' alt='Activation MFA utilisateur' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Mise en place de la MFA pour les utilisateurs.</figcaption></figure></div>"
@@ -513,23 +521,31 @@
                             </div>
                         </div>
 
-                        <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
-                             data-proof-title="Campagne de phishing (interne)"
-                             data-proof-desc=""
-                             data-proof-html="<div class='space-y-4'><figure><img src='MailPhissing.png' alt='Mail de phishing simulé' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Email de phishing utilisé pendant la campagne.</figcaption></figure><figure><img src='MailPhissingDetails.png' alt='Détails de la campagne' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Statistiques d’ouverture et de clics pour cibler la sensibilisation.</figcaption></figure><figure><img src='MailOuvert.png' alt='Email ouvert' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Exemple d’ouverture — base de la session de sensibilisation.</figcaption></figure><div class='text-xs text-gray-600'>Suite au test, <strong>sensibilisation ciblée</strong> : vérification des expéditeurs/liens, signalement aux équipes IT.</div></div>"
-                             data-proof-img="">
-                            <div class="flex items-center mb-4">
-                                <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
-                                    <i class="fas fa-user-shield text-xl"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 text-center md:text-left">Autres</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="mission-card bg-gray-50 p-6 rounded hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 group cursor-pointer relative"
+                                 data-proof-title="Campagne de phishing (interne)"
+                                 data-proof-desc=""
+                                 data-proof-html="<div class='space-y-4'><figure><img src='MailPhissing.png' alt='Mail de phishing simulé' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Email de phishing utilisé pendant la campagne.</figcaption></figure><figure><img src='MailPhissingDetails.png' alt='Détails de la campagne' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Statistiques d’ouverture et de clics pour cibler la sensibilisation.</figcaption></figure><figure><img src='MailOuvert.png' alt='Email ouvert' class='rounded border border-gray-200'><figcaption class='text-xs text-gray-500 mt-1'>Exemple d’ouverture — base de la session de sensibilisation.</figcaption></figure><div class='text-xs text-gray-600'>Suite au test, <strong>sensibilisation ciblée</strong> : vérification des expéditeurs/liens, signalement aux équipes IT.</div></div>"
+                                 data-proof-img="">
+                                <div class="flex items-center mb-4">
+                                    <div class="p-3 bg-white rounded-full shadow-sm text-bdl-red mr-4 group-hover:bg-bdl-red group-hover:text-white transition">
+                                        <i class="fas fa-user-shield text-xl"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-gray-800">Sensibilisation phishing</h4>
                                 </div>
-                                <h4 class="font-bold text-lg text-gray-800">Sensibilisation phishing</h4>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Tests de phishing internes et actions de sensibilisation des utilisateurs.</p>
-                            <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
-                                <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Tests de phishing internes et actions de sensibilisation des utilisateurs.</p>
+                                <div class="absolute bottom-3 right-3 text-gray-300 group-hover:text-bdl-red transition-colors duration-300 transform group-hover:scale-110">
+                                    <i class="fas fa-eye text-lg" title="Voir la preuve"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -943,8 +959,38 @@
             // Initialisation : Afficher Presentation par défaut
             switchPage('presentation');
 
+            /* --- 2. Onglets de présentation --- */
+            const presentationTabs = document.querySelectorAll('.presentation-tab');
+            const presentationPanels = {
+                entreprise: document.getElementById('presentation-entreprise'),
+                personnelle: document.getElementById('presentation-personnelle')
+            };
 
-            /* --- 2. Logique de la Modale "Preuves" --- */
+            function switchPresentation(target) {
+                Object.keys(presentationPanels).forEach(key => {
+                    const panel = presentationPanels[key];
+                    if (!panel) return;
+                    panel.classList.toggle('hidden', key !== target);
+                });
+
+                presentationTabs.forEach(tab => {
+                    const isActive = tab.getAttribute('data-target') === target;
+                    tab.classList.toggle('bg-bdl-red', isActive);
+                    tab.classList.toggle('text-white', isActive);
+                    tab.classList.toggle('text-gray-700', !isActive);
+                });
+            }
+
+            presentationTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-target');
+                    if (target) switchPresentation(target);
+                });
+            });
+
+            switchPresentation('personnelle');
+
+            /* --- 3. Logique de la Modale "Preuves" --- */
             const modal = document.getElementById('proof-modal');
             const modalTitle = document.getElementById('modal-title');
             const modalDesc = document.getElementById('modal-description');
